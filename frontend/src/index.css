@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr{
+    display: block;
+}
+
+*{
+    font-size: Outfit;
+}
+
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+/* Custom switch toggle with icons */
+/* Custom switch toggle with icons - smaller version */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 2;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px; /* Reduced the size */
+    width: 50px; /* Set width to a smaller value */
+    height: 24px; /* Set height to a smaller value */
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Reduced height */
+    width: 20px; /* Reduced width */
+    left: 2px;
+    bottom: 2px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #ccc;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px); /* Adjust translateX based on smaller size */
+  }
+  
+  .slider.round {
+    border-radius: 20px; /* Match the smaller size */
+    
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+    
+  }
+  
+  .slider img {
+    width: 16px; /* Adjust icon size */
+    height: 16px;
+  }
+
+@media (max-width:640px) {
+    a.active{
+        background-color: black;
+        color: white;
+    }
+}
